@@ -17,6 +17,20 @@ var (
 	WebsocketKeepalive = false
 )
 
+// WithStreamBaseURL define a websocket baseURL
+func WithStreamBaseURL(endpoint string) {
+	if endpoint != "" {
+		baseURL = endpoint
+	}
+}
+
+// WithCombinedStreamBaseURL define a websocket baseURL
+func WithCombinedStreamBaseURL(endpoint string) {
+	if combinedBaseURL != "" {
+		combinedBaseURL = endpoint
+	}
+}
+
 // WsPartialDepthEvent define websocket partial depth book event
 type WsPartialDepthEvent struct {
 	Symbol       string
